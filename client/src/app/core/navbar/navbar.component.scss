@@ -9,3 +9,19 @@
   top: -12px;
   left: 25px;
 }
+
+.logo-img {
+  max-height: 70px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  color: #343a40;
+
+  &.active {
+    color: orange;
+  }
+}

@@ -1,18 +1,27 @@
 <div class="d-flex flex-column flex-md-row align-items-center justify-content-between p-3 mb-4 border-bottom fixed-top bg-white">
-  <img src="../../../assets/images/logo.png" alt="logo" style="max-height: 70px">
+    <img [routerLink]="['/']" src="../../../assets/images/logo.png" alt="logo" class="logo-img">
 
-  <nav class="my-2 my-md-0 me-md-3 text-uppercase" style="font-size: larger">
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Home</a>
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Shop</a>
-    <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contact</a>
-  </nav>
+    <nav class="my-2 my-md-0 me-md-3 text-uppercase" style="font-size: larger">
+        <a [routerLinkActiveOptions]="{ exact: true }"
+           [routerLink]="['/']"
+           class="me-3 py-2 text-decoration-none"
+           routerLinkActive="active">
+            Home
+        </a>
+        <a [routerLink]="['/', 'shop']"
+           class="me-3 py-2 text-decoration-none"
+           routerLinkActive="active">
+            Shop
+        </a>
+        <a class="me-3 py-2 text-decoration-none" href="#">Contact</a>
+    </nav>
 
-  <div class="d-flex align-items-center">
-    <a class="me-5 position-relative">
-      <i class="fa fa-shopping-cart fa-2x text-dark"></i>
-      <span class="cart-no">5</span>
-    </a>
-    <a class="btn btn-outline-secondary me-2">Log in</a>
-    <a class="btn btn-outline-secondary me-3">Sign up</a>
-  </div>
+    <div class="d-flex align-items-center">
+        <a class="me-5 position-relative">
+            <i class="fa fa-shopping-cart fa-2x text-dark"></i>
+            <span class="cart-no">5</span>
+        </a>
+        <a class="btn btn-outline-secondary me-2">Log in</a>
+        <a class="btn btn-outline-secondary me-3">Sign up</a>
+    </div>
 </div>
